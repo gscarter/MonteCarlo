@@ -7,6 +7,12 @@ MonteCarlo
 
 A python package for computing average ising ensemble values
 
+This repository is currently under development. To do installation in development mode, download this repository and type
+
+`pip install -e .`
+
+in the repository directory.
+
 ### Copyright
 
 Copyright (c) 2025, Gabrielle Carter
