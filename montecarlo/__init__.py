@@ -5,3 +5,8 @@ from .functions import *
 
 
 from ._version import __version__
+
+from .bitstring_class import *
+
+from .IsingHamiltonian import *
+
