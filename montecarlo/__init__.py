@@ -10,3 +10,5 @@ from .bitstring_class import *
 
 from .IsingHamiltonian import *
 
+from .MonteCarlo import *
+

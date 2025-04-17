@@ -7,10 +7,13 @@ from montecarlo import *
 
 
 class IsingHamiltonian:
-    def __init__(self, G):
+    def __init__(self, G: nx.Graph):
         self.G = G
-        self.mu = np.zeros(len(G.nodes()))
-        self.N = len(G.nodes())
+        self.mu = np.zeros(len(self.G.nodes()))
+        self.N = len(self.G.nodes())
+
+    def __len__(self):
+        return self.N
     
     def energy(self, config):
         """Compute energy of configureation, 'config'
@@ -63,6 +66,24 @@ class IsingHamiltonian:
             k = k + 1
 
         return float(en+mag)
+    
+    def mag(self, config):
+        """Compute magnitization of configureation, 'config'
+            .. math::
+                mag = on - off
+            
+        Parameters
+        ----------
+        config : BitString
+        Returns
+        -------
+        magnitization : float
+            magnitization of the input configuration
+        """
+        mag = 0
+        mag = config.on()-config.off()
+        return mag
+
         
     def set_mu(self, mus):
         """Set the net magnetization, 'mus'
