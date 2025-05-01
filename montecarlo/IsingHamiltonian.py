@@ -101,7 +101,7 @@ class IsingHamiltonian:
         while i<len(mus):
             self.mu[i]= mus[i]
             i = i + 1
-        return self.mu
+        return self
 
 
     
