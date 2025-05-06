@@ -2,6 +2,7 @@ import sys
 import numpy as np
 import pytest
 import montecarlo
+import networkx as nx
 #import graphbuilder
 
 
