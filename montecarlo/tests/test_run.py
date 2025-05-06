@@ -7,15 +7,14 @@ import networkx as nx
 
 
 def test_1():
+    N=6
     G = nx.Graph()
     G.add_nodes_from([i for i in range(N)])
     G.add_edges_from([(i,(i+1)% G.number_of_nodes() ) for i in range(N)])
     for e in G.edges:
         G.edges[e]['weight'] = Jval
 
-    N = G.number_of_edges()
-    
-    N = 6
+   
     #initialize BitString
     ham = montecarlo.IsingHamiltonian(G)
     ham.set_mu([.1 for i in range(N)])
