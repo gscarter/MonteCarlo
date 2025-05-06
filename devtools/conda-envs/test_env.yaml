@@ -7,9 +7,6 @@ dependencies:
   - python
   - pip
   - numpy
-  - math
-  - random
-  - copy
   - networkx
   - matplotlib
 
