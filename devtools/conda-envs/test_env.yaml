@@ -11,7 +11,7 @@ dependencies:
   - random
   - copy
   - networkx
-  - matplotlib.pyplot
+  - matplotlib
 
 
     # Testing
