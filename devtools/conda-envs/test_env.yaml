@@ -1,11 +1,18 @@
 name: test
 channels:
-
+  - conda-forge
   - defaults
 dependencies:
     # Base depends
   - python
   - pip
+  - numpy
+  - math
+  - random
+  - copy
+  - networkx
+  - matplotlib.pyplot
+
 
     # Testing
   - pytest
