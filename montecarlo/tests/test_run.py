@@ -2,11 +2,16 @@ import sys
 import numpy as np
 import pytest
 import montecarlo
-import graphbuilder
+#import graphbuilder
 
 
 def test_1():
-    G = graphbuilder.build_graph2()
+    G = nx.Graph()
+    G.add_nodes_from([i for i in range(N)])
+    G.add_edges_from([(i,(i+1)% G.number_of_nodes() ) for i in range(N)])
+    for e in G.edges:
+        G.edges[e]['weight'] = Jval
+
     N = G.number_of_edges()
     
     N = 6
