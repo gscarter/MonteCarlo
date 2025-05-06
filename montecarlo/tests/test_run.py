@@ -8,6 +8,7 @@ import networkx as nx
 
 def test_1():
     N=6
+    Jval=1.0
     G = nx.Graph()
     G.add_nodes_from([i for i in range(N)])
     G.add_edges_from([(i,(i+1)% G.number_of_nodes() ) for i in range(N)])
