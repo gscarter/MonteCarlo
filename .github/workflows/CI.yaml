@@ -58,9 +58,9 @@ jobs:
         run: |
           pytest -v --cov=montecarlo --cov-report=xml --color=yes montecarlo/tests/
 
-      - name: CodeCov
-        uses: codecov/codecov-action@v1
+
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v5
         with:
-          file: ./coverage.xml
-          flags: unittests
-          name: codecov-${{ matrix.os }}-py${{ matrix.python-version }}
+          token: ${{ secrets.4b79122c-de39-491a-9c9d-32b5f7d5cd16 }}
+          slug: gscarter/MonteCarlo
